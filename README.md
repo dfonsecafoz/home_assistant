@@ -28,6 +28,9 @@ from .tuya_unsxl4ir import TuyaQuadSwitchTZE204
 
 1. Crie o arquivo `tuya_unsxl4ir.py` no mesmo diretório.
 2. Insira o conteúdo completo da quirk personalizada (_TZE204_unsxl4ir).
+```python
+Conteúdo de tuya
+```
 
 ---
 
