@@ -131,6 +131,26 @@ zha:
   custom_quirks_path: /config/custom_zha_quirks
 ```
 
+Codigo completo do arquivo configuration.yaml
+```yaml
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+zha:
+  custom_quirks_path: /config/custom_zha_quirks
+```
+
+
+
 ---
 
 ## 5. 🔁 Reiniciar o Home Assistant
