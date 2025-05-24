@@ -1,1 +1,46 @@
-Instrução de Instalação/Configuração do interruptor NOVA DIGITAL DE 4 GANGS
+Guia de Configuração do Interruptor _TZE204_unsxl4ir (TS0601) com ZHA e Quirk Personalizada no Home Assistant
+1. Preparação do Ambiente
+Pré-requisitos:
+
+Home Assistant instalado e funcionando (versão com ZHA).
+
+Acesso root ao sistema de arquivos do host (ou Supervisor).
+
+Acesso ao terminal do Home Assistant.
+
+File Editor habilitado ou acesso por SSH.
+
+2. Criar o Diretório de Quirks Personalizados
+
+mkdir -p /var/lib/homeassistant/homeassistant/custom_zha_quirks
+
+Criar o arquivo  __init__.py com o conteúdo do arquivo __init__py dentro do diretorio  /var/lib/homeassistant/homeassistant/custom_zha_quirks
+
+Esse caminho corresponde ao /config/custom_zha_quirks no Home Assistant.
+
+3. Criar a Quirk Personalizada
+Criar o arquivo tuya_unsxl4ir.py dentro do diretorio /var/lib/homeassistant/homeassistant/custom_zha_quirks
+Inserir o código do arquivo tuya_unsxl4ir.py
+
+Apontar o caminho da quirk no configuration.yaml
+No arquivo /config/configuration.yaml
+
+zha:
+  custom_quirks_path: /config/custom_zha_quirks
+
+
+5. Reiniciar o Home Assistant
+Reinicie o Home Assistant para aplicar a quirk:
+
+6. Reparear o Dispositivo
+Vá até Configurações > Dispositivos e Serviços > ZHA > Configurar.
+
+Remova o dispositivo _TZE204_unsxl4ir, caso já esteja pareado.
+
+Adicione novamente o dispositivo (modo pareamento).
+
+Verifique se agora aparecem todas as 4 entidades (luzes).
+
+7. Testar Automação com Sensor
+
+
